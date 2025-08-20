@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trig Tool</title>
+        <link rel="stylesheet" href="trig-style.css">
+        <link rel="stylesheet" href="buttons.css">
+    </head>
+    <body>
+        <div class="mainBox">
+            <p class="title">Trigonometric Circle</p>
+            <div class="subBox">
+                <div class="circleSvg" >
+                    <svg class="viewboxsvg" viewBox="-100 -100 200 200">
+                        <circle class="circle" r="50" cx="0" cy="0"/>
+                        <path class="cross" d="M 0,-50 L 0,50 M -50,0 L 50,0"></path>
+                        <path class="addLines"></path>
+                        <path class="ratioCos"></path>
+                        <path class="ratioSin"></path>
+                        <path class="ratioTan"></path>
+                    </svg>
+                </div>
+
+                <div class="toolBox">
+                    <div class="box1">
+                        <p style="margin-bottom:10px">Standard angles</p>
+                        <button class="button30" onclick="drawline(30);">30</button>
+                        <button class="button45" onclick="drawline(45);">45</button>
+                        <button class="button60" onclick="drawline(60);">60</button>
+                        <p style="margin: 10px 0 10px 0">Ratios</p>
+                        <button onclick="visibleRatio('cos');">Cos</button>
+                        <button onclick="visibleRatio('sin');">Sin</button>
+                        <button onclick="visibleRatio('tan');">Tan</button>
+                        <p class="errorMessage"></p>
+                        <p style="margin: 10px 0 10px 0">Custom Angle</p>
+                        <input onkeydown="if(event.key === 'Enter'){getAngle();}" class="insertAngle" type="text" placeholder="Insert angle"><button class="drawButton" onclick="getAngle();">Draw</button>
+                    </div>
+                    <div class="box2">
+                        <p class="resetButton">Reset</p>
+                        <button style="display:block; margin-top: 10px;" onclick="reset();">Reset</button>
+                        <p style="margin:10px 0 10px 0">Zoom</p>
+                        <button style="margin-bottom:10px; font-weight:bold;" onclick="zoomIn();">+</button>
+                        <button style="font-weight:bold;" onclick="zoomOut();">-</button>
+                    </div>     
+                </div>
+            </div> 
+        </div> 
+        <script src="trig-js.js"></script>
+    </body>
+</html>

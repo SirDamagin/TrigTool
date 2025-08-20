@@ -1,0 +1,127 @@
+body
+{
+    margin:0;
+    height:100vh;
+    background-color: rgb(128, 237, 153);
+}
+p
+{
+    margin:0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(34, 87, 122);
+    font-weight:bold;
+}
+
+.title
+{
+    margin-top:25px;
+    margin-left:20px;
+    margin-bottom:20px;
+    font-size:24px;
+
+    color:rgb(34, 87, 122);
+    font-weight:bold;
+}
+.mainBox
+{
+    display:flex;
+    flex-direction:column;
+    height:100%;
+    width:100%;
+}
+.circle
+{
+    fill:none;
+    stroke:black;
+    stroke-width: 2px;
+}
+.cross
+{
+    stroke:black;
+    stroke-width: 1px;
+}
+.addLines
+{
+    stroke: rgb(208, 17, 202);
+    stroke-width: 2px;
+}
+.ratioCos
+{
+    stroke: rgb(255, 162, 0);
+    stroke-width: 2px;
+}
+.ratioSin
+{
+    stroke: rgb(58, 229, 39);
+    stroke-width: 2px;
+}
+.ratioTan
+{
+    stroke: rgb(255, 0, 0);
+    stroke-width: 2px;
+}
+.errorMessage
+{
+    margin-top: 10px;
+    color:red; 
+    font-size:14px;
+}
+
+@media (max-width: 850px)
+{
+    .subBox
+    {
+        flex-direction: column;
+        height:100%;
+    }
+    .circleSvg
+    {
+        height:300px;
+        display:flex;
+        padding-left: 20px;
+    }
+    .toolBox
+    {
+        display:flex;
+        flex-direction: row;
+        width:80%;
+        height:47%;
+        padding-left:20px;
+        padding-top:25px;
+    }
+    svg
+    {
+        background-color: white;
+        border-radius:20px;
+    }
+}
+
+@media (min-width: 850px)
+{
+    .subBox
+    {
+        display:flex;
+        flex-direction:row;
+        width: 1040px;
+    }
+    .circleSvg
+    {
+        width:40%;
+        padding-left: 20px;
+    }
+    .toolBox
+    {
+        width:60%;
+        padding-top: 20px;
+        padding-left: 50px;
+    }
+    svg
+    {
+        background-color: white;
+        border-radius:20px;
+    }
+    .resetButton
+    {
+        margin-top:10px;
+    }
+}
